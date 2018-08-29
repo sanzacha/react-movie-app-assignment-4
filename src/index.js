@@ -1,6 +1,8 @@
-import React from "react";
-import ReactDom from "react-dom";
-import "bootstrap/dist/css/bootstrap.css";
-import MovieApp from './components/movieApp'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './components/App';
+import {createStore} from 'redux';
+import MovieReducers from './MovieReducers';
+const store = createStore(MovieReducers);
 
-ReactDom.render(<MovieApp />, document.getElementById("root"));
+ReactDOM.render(<App/>, document.getElementById('root'));
